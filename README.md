@@ -35,12 +35,27 @@ search( { q : "node" }, function(error, tweets, tweetCount) {
 });
 ```
 
-	* Search with a RegEx
+	* Search with from user without regex
 
 ```javascript
 var search = require("twitter-search");
 
-search( { q : 'from:kisshotch', regex : }, function(error, tweets, tweetCount) {
+search( { q : 'from:kisshotch' }, function(error, tweets, tweetCount) {
+	if (error) {
+		console.error(error);
+	} else {
+		console.log("tweets: " tweetCount);
+		console.log(tweets);
+	}
+});
+```
+
+	* Search with from user **with** regex
+
+```javascript
+var search = require("twitter-search");
+
+search( { q : 'from:kisshotch', regex : /[^node]/i }, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
