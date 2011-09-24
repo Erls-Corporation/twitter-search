@@ -6,11 +6,10 @@ twitter-search
 
 	* Install, run examples, easy.
 	* Next up: 
-		rate limit pounding 
-		search queueing
-		RegEx searching
-		smart sorting
-		schema ready data dumps
+	- rate limit pounding 
+	- search queueing
+	- smart sorting
+	- schema ready data dumps
 
 ```bash
 $ npm install twitter-search
@@ -55,7 +54,7 @@ search( { q : 'from:kisshotch' }, function(error, tweets, tweetCount) {
 ```javascript
 var search = require("twitter-search");
 
-search( { q : 'from:kisshotch', regex : /[^node]/i }, function(error, tweets, tweetCount) {
+search( { q : 'from:kisshotch', regex : /#UnitTests/gi }, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
