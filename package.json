@@ -5,7 +5,7 @@
   "version": "0.0.3",
 	"repository" : {
     "type": "git",
-    "url": "https://github.com/edwardhotchkiss/raisonbrand"
+    "url": "https://github.com/edwardhotchkiss/twitter-search"
 	},
   "keywords": ["twitter", "twitter-search", "search", "API"],
  	"engines" : {
