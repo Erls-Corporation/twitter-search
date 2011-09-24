@@ -2,7 +2,7 @@
   "author": "Edward Hotchkiss <e@ingk.com>",
   "name": "twitter-search",
   "description": "Node.js Twitter API Search w/ search result pagination, returning up to 1500 queried tweets",
-  "version": "0.0.7",
+  "version": "0.0.8",
 	"repository" : {
     "type": "git",
     "url": "https://github.com/edwardhotchkiss/twitter-search"
@@ -12,6 +12,7 @@
     "node": "~v0.4.11"
   },
   "dependencies" : {
-  		"request":"2.1.1"
+  		"request":"2.1.1",
+      "colors":""
   	}
 }
