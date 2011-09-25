@@ -10,6 +10,8 @@ twitter-search
 	- search queueing
 	- smart sorting
 	- schema ready data dumps
+	- noise filter
+	- optional @Klout calculations
 
 ```bash
 $ npm install twitter-search
@@ -25,7 +27,7 @@ $ node bieber-search.js
 var search = require("twitter-search");
 
 // params: https://dev.twitter.com/docs/api/1/get/search
-search( { q : "node" }, function(error, tweets, tweetCount) {
+search( { q : "node" }, null, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
@@ -39,7 +41,7 @@ search( { q : "node" }, function(error, tweets, tweetCount) {
 ```javascript
 var search = require("twitter-search");
 
-search( { q : 'from:kisshotch' }, function(error, tweets, tweetCount) {
+search( { q : 'from:kisshotch' }, null, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
@@ -54,7 +56,7 @@ search( { q : 'from:kisshotch' }, function(error, tweets, tweetCount) {
 ```javascript
 var search = require("twitter-search");
 
-search( { q : 'from:kisshotch', regex : /#UnitTests/gi }, function(error, tweets, tweetCount) {
+search( { q : 'from:kisshotch', regex : /#UnitTests/gi }, null, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
@@ -62,4 +64,35 @@ search( { q : 'from:kisshotch', regex : /#UnitTests/gi }, function(error, tweets
 		console.log(tweets);
 	}
 });
+```
+	
+	* LET'S GET SERIOUS WITH OUR SEARCH.
+
+```javascript
+var noise = [
+	"LISP",
+	"C++",
+	"Java"
+];
+
+var config = {
+	noise : noise,
+	klout : true,
+	sorting : function(a, b) {
+		return b.Klout - a.Klout;
+	}
+};
+
+search( { q : "programming", regex : /[^pogram]/gi }, config, function(error, tweets, tweetCount) {
+	if (error) {
+		console.error(error);
+	} else {
+		console.log("tweets: " tweetCount);
+		console.log(tweets);
+	}
+});
+```
+
+```bash
+EOF
 ```
