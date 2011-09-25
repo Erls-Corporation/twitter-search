@@ -83,13 +83,13 @@ var config = {
 	}
 };
 
-search( { q : "programming", regex : /[^pogram]/gi }, config, function(error, tweets, tweetCount) {
+search( { q : "programming", regex : /[^girls]/gi }, config, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
-		console.log("tweets: " tweetCount);
+		console.log("tweets: ", tweetCount);
 		console.log(tweets);
-	}
+	};
 });
 ```
 
