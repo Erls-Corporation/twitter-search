@@ -1,7 +1,6 @@
 
 var search = require("../../");
 
-// bzzZZZZZzzzz
 var noise = [
 	"LISP",
 	"C++",
