@@ -4,7 +4,7 @@ var fullauto = require("fullauto");
 var should = fullauto.should;
 var search = require("../");
 
-fullauto.add("WHEN I CHECK if 'search' is of type function THEN it SHOULD", function() {
+fullauto.add("WHEN I CHECK if 'search' is of type function THEN it SHOULD BE", function() {
 	search.should.be.a("function");
 });
 

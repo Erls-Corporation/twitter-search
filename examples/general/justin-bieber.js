@@ -7,7 +7,7 @@ But hey, should I really search for hello world? :P
 var search = require("twitter-search");
 
 // Tweets containing exactly 'just bieber'
-search( { q : '"justin bieber"' }, function(error, tweets, tweetCount) {
+search( { q : '"justin bieber"' }, null, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {

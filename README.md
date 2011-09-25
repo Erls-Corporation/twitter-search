@@ -69,6 +69,8 @@ search( { q : 'from:kisshotch', regex : /#UnitTests/gi }, null, function(error, 
 	* LET'S GET SERIOUS WITH OUR SEARCH.
 
 ```javascript
+var search = require("twitter-search");
+
 var noise = [
 	"LISP",
 	"C++",

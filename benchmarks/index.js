@@ -1,7 +1,7 @@
 
 // thanks mongoose
 var search = require("../");
-var memory = require("../lib/memory");
+var memory = require("memory");
 require("colors");
 
 var start = new Date;
