@@ -20,6 +20,6 @@ search( { q : "programming", regex : /[^girls]/gi }, config, function(error, twe
 		console.error(error);
 	} else {
 		console.log("tweets: ", tweetCount);
-		console.log(tweets);
+		//console.log(tweets);
 	};
 });
