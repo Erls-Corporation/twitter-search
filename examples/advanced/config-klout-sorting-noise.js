@@ -11,15 +11,15 @@ var config = {
 	noise : noise,
 	klout : true,
 	sorting : function(a, b) {
-		return b.Klout - a.Klout;
+		return b.klout - a.klout;
 	}
 };
 
-search( { q : "programming", regex : /[^girls]/gi }, config, function(error, tweets, tweetCount) {
+search( { q : "from:kisshotch", regex : /^/ }, config, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
 		console.log("tweets: ", tweetCount);
-		//console.log(tweets);
+		console.log(tweets);
 	};
 });
