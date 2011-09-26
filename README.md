@@ -19,7 +19,7 @@ $ cd examples
 $ node bieber-search.js
 ```
 
-**Examples**
+## Examples ##
 
 ***Basic Twitter Search***
 
@@ -36,7 +36,7 @@ search( { q : "node" }, null, function(error, tweets, tweetCount) {
 });
 ```
 
-***Search with from user without regex***
+***Search with from user WITHOUT regex***
 
 ```javascript
 var search = require("twitter-search");
@@ -51,7 +51,7 @@ search( { q : 'from:kisshotch' }, null, function(error, tweets, tweetCount) {
 });
 ```
 
-***Search with from user **with** regex***
+***Search with from user WITH regex***
 
 ```javascript
 var search = require("twitter-search");
@@ -80,7 +80,6 @@ var config = {
 	}
 };
 
-// match all (for now);
 search( { q : "from:kisshotch", regex : /node/ }, config, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
