@@ -66,26 +66,22 @@ search( { q : 'from:kisshotch', regex : /#UnitTests/gi }, null, function(error, 
 });
 ```
 	
-	* LET'S GET SERIOUS WITH OUR SEARCH.
+	* Search with result sorting (.text DESC)
 
 ```javascript
 var search = require("twitter-search");
 
-var noise = [
-	"LISP",
-	"C++",
-	"Java"
-];
-
 var config = {
-	noise : noise,
-	klout : true,
+	// sort by text DESC
 	sorting : function(a, b) {
-		return b.Klout - a.Klout;
+		var x = a["text"].toLowerCase();
+    	var y = b["text"].toLowerCase();
+    	return ((x > y) ? -1 : ((x < y) ? 1 : 0));
 	}
 };
 
-search( { q : "programming", regex : /[^girls]/gi }, config, function(error, tweets, tweetCount) {
+// match all (for now);
+search( { q : "from:kisshotch", regex : /node/ }, config, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
