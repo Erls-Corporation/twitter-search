@@ -30,7 +30,6 @@ search( { q : "from:kisshotch", regex : /^/ }, config, function(error, tweets, t
 		console.error(error);
 	} else {
 		console.log("tweets:",tweetCount);
-		console.log(tweets);
 	};
 });
 
