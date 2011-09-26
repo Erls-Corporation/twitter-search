@@ -15,11 +15,11 @@ var config = {
 	}
 };
 
-search( { q : "from:kisshotch", regex : /^/gi }, config, function(error, tweets, tweetCount) {
+// match all (for now);
+search( { q : "from:kisshotch", regex : /ryah/ }, config, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
 		console.log("tweets: ", tweetCount);
-		//console.log(tweets);
 	};
 });
