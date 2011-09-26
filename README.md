@@ -19,9 +19,9 @@ $ cd examples
 $ node bieber-search.js
 ```
 
-	* Examples
+**Examples**
 
-	* Basic Twitter Search
+***Basic Twitter Search***
 
 ```javascript
 var search = require("twitter-search");
@@ -36,7 +36,7 @@ search( { q : "node" }, null, function(error, tweets, tweetCount) {
 });
 ```
 
-	* Search with from user without regex
+***Search with from user without regex***
 
 ```javascript
 var search = require("twitter-search");
@@ -51,7 +51,7 @@ search( { q : 'from:kisshotch' }, null, function(error, tweets, tweetCount) {
 });
 ```
 
-	* Search with from user **with** regex
+***Search with from user **with** regex***
 
 ```javascript
 var search = require("twitter-search");
@@ -66,7 +66,7 @@ search( { q : 'from:kisshotch', regex : /#UnitTests/gi }, null, function(error, 
 });
 ```
 	
-	* Search with result sorting (.text DESC)
+***Search with result sorting (.text DESC)***
 
 ```javascript
 var search = require("twitter-search");
@@ -92,5 +92,5 @@ search( { q : "from:kisshotch", regex : /node/ }, config, function(error, tweets
 ```
 
 ```bash
-EOF
+$ echo EOF
 ```
