@@ -15,7 +15,7 @@ twitter-search
 
 ```bash
 $ npm install twitter-search
-$ cd examples
+$ cd examples && cd general
 $ node bieber-search.js
 ```
 

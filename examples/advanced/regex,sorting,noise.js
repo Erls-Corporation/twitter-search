@@ -1,6 +1,12 @@
 
 var search = require("../../");
 
+var noise = [
+	/C++/,
+	/Java/,
+	/Perl/
+];
+
 var config = {
 	// sort by text DESC
 	sorting : function(a, b) {
@@ -11,7 +17,7 @@ var config = {
 };
 
 // match all (for now);
-search( { q : "from:kisshotch", regex : /node/ }, config, function(error, tweets, tweetCount) {
+search( { q : "programming", regex : /books/ }, config, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
