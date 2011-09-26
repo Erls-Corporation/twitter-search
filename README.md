@@ -8,9 +8,7 @@ twitter-search
 	* Next up: 
 	- rate limit pounding 
 	- search queueing
-	- smart sorting
 	- schema ready data dumps
-	- noise filter
 	- optional @Klout calculations
 
 ```bash
@@ -90,6 +88,80 @@ search( { q : "from:kisshotch", regex : /node/ }, config, function(error, tweets
 });
 ```
 
-```bash
-$ echo EOF
+***Search with RegEx, kSorts and noise filters***
+
+```javascript
+var search = require("twitter-search");
+
+// filter out my work
+var work = [
+	"module",
+	"node",
+	"js",
+	"klout",
+	"github",
+	"mongo",
+	"api",
+	"npm",
+	"startup",
+	"twitter",
+	"facebook",
+];
+
+var config = {
+	filter : work,
+	sorting : function(a, b) {
+		var x = a["text"].toLowerCase();
+    	var y = b["text"].toLowerCase();
+    	return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+	}
+};
+
+// match all so that we can apply the filter
+search( { q : "from:kisshotch", regex : /^/ }, config, function(error, tweets, tweetCount) {
+	if (error) {
+		console.error(error);
+	} else {
+		console.log("tweets:",tweetCount);
+	};
+});
+```
+
+***Search with RegEx, kSorts, noise filters, Klout scores (sort be Klout score DESC) ***
+
+var search = require("twitter-search");
+
+var work = [
+	"module",
+	"node",
+	"js",
+	"klout",
+	"github",
+	"mongo",
+	"api",
+	"npm",
+	"startup",
+	"twitter",
+	"facebook",
+];
+
+var config = {
+	filter : work,
+	klout : true,
+	sorting : function(a, b) {
+		var x = a["klout"].toLowerCase();
+    	var y = b["klout"].toLowerCase();
+    	return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+	}
+};
+
+search( { q : "from:kisshotch", regex : /^/ }, config, function(error, tweets, tweetCount) {
+	if (error) {
+		console.error(error);
+	} else {
+		console.log("tweets:",tweetCount);
+	};
+});
+
+/* EOF */
 ```
