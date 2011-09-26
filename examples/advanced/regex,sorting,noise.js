@@ -2,12 +2,13 @@
 var search = require("../../");
 
 var noise = [
-	/C++/,
-	/Java/,
-	/Perl/
+	"kindle",
+	"ebook"
 ];
 
 var config = {
+	// filters
+	noise : noise,
 	// sort by text DESC
 	sorting : function(a, b) {
 		var x = a["text"].toLowerCase();
@@ -16,12 +17,12 @@ var config = {
 	}
 };
 
-// match all (for now);
-search( { q : "programming", regex : /books/ }, config, function(error, tweets, tweetCount) {
+// match all so that we can apply the filter
+search( { q : "programming", regex : /^/ }, config, function(error, tweets, tweetCount) {
 	if (error) {
 		console.error(error);
 	} else {
 		console.log("tweets: ", tweetCount);
-		console.log(tweets);
+		//console.log(tweets);
 	};
 });
