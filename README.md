@@ -127,8 +127,9 @@ search( { q : "from:kisshotch", regex : /^/ }, config, function(error, tweets, t
 });
 ```
 
-***Search with RegEx, kSorts, noise filters, Klout scores (sort be Klout score DESC) ***
+***Search with RegEx, kSorts, noise filters, Klout scores (sort be Klout score DESC)***
 
+```javascript
 var search = require("twitter-search");
 
 var work = [
