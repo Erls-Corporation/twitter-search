@@ -2,7 +2,7 @@
   "author": "Edward Hotchkiss <e@ingk.com>",
   "name": "twitter-search",
   "description": "Node.js Twitter API Search w/ search result pagination, returning up to 1500 queried tweets with kSort, Klout scoring and filters",
-  "version": "0.3.2",
+  "version": "0.3.3",
 	"repository" : {
     "type": "git",
     "url": "https://github.com/edwardhotchkiss/twitter-search"
