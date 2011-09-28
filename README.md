@@ -150,8 +150,8 @@ var config = {
 	filter : work,
 	klout : true,
 	sorting : function(a, b) {
-		var x = a["klout"].toLowerCase();
-    	var y = b["klout"].toLowerCase();
+		var x = a["klout"];
+    	var y = b["klout"];
     	return ((x > y) ? -1 : ((x < y) ? 1 : 0));
 	}
 };
