@@ -36,6 +36,17 @@ vows.describe("Basic Twitter-Search module tests").addBatch({
     },
     "search should be a function" : function (topic) {
       topic.should.be.a("function");
+    },
+  },
+  "when performing a search without a config set" : {
+    topic : function() {
+      search({q:"from:kisshotch", regex : /^/ }, null, this.callback);
+    },
+    "should have error errors" : function(error, tweets, count) {
+      assert.isNotNull(error);
+    },
+    "should receive error message" : function(error, tweets, count) {
+      assert.equal(error.message, "config needs to be defined!");
     }
   }
 }).export(module);
