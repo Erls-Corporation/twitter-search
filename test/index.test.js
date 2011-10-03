@@ -1,5 +1,5 @@
 
-var search = require("twitter-searh");
+var search = require("../");
 
 var work = [
 	"module",
