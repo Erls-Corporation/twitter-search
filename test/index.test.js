@@ -30,12 +30,12 @@ function search() {
 };
 
 vows.describe("Basic Twitter-Search module tests").addBatch({
-  'when dividing a number by zero': {
-    topic: function () { 
-      return 42 / 0 
+  "when instantiating twitter-search" : {
+    topic : function() { 
+      return search;
     },
-    'we get Infinity': function (topic) {
-      assert.equal (topic, Infinity);
+    "search should be a function" : function (topic) {
+      topic.should.be.a("function");
     }
   }
 }).export(module);
