@@ -20,9 +20,10 @@ $ npm install twitter-search
 ***Basic Twitter Search***
 
 ```javascript
-var config = {
-  filter : ["node", "mongo"],
-  query : "from:kisshotch"
+ var config = {
+  query : "from:kisshotch",
+  regex : /node|mongo/gi,
+  filter : ["cancer", "is"]
 };
 
 search(config, function(error, tweets, tweetCount) {
