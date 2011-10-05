@@ -7,12 +7,13 @@ var should = require("should");
 // twitter-search core
 var search = require("../");
 
-vows.describe("RegEx Tests").addBatch({
-  "When performing a search with a regex looking for node or mongo which I'm always talking about" : {
+vows.describe("Noise Filter").addBatch({
+  "When performing a search with a noise filter that is an 'Array' of length of more than one" : {
     topic : function() {
       var config = {
         query : "from:kisshotch",
-        regex : /node|mongo/gi
+        regex : /node|mongo/gi,
+        filter : ["cancer", "ingk"]
       };
       search(config, this.callback);
     },
