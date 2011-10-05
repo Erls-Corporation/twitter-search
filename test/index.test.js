@@ -7,7 +7,7 @@ var should = require("should");
 // twitter-search core
 var search = require("../");
 
-vows.describe("Basic Twitter-Search module tests").addBatch({
+vows.describe("General Module Tests").addBatch({
   "when instantiating twitter-search" : {
     topic : function() { 
       return search;
@@ -18,7 +18,7 @@ vows.describe("Basic Twitter-Search module tests").addBatch({
   },
   "when performing a search without a config set" : {
     topic : function() {
-      search({q:"from:kisshotch", regex : /^/ }, null, this.callback);
+      search(null, this.callback);
     },
     "should have error errors" : function(error, tweets, count) {
       assert.isNotNull(error);
