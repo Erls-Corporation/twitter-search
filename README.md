@@ -4,13 +4,6 @@ twitter-search
 
 **Node.js Twitter API Search w/ search result pagination, returning up to 1500 queried tweets**
 
-  * Install, run examples, easy.
-  * Next up: 
-  - rate limit pounding 
-  - search queueing
-  - schema ready data dumps
-  - optional @Klout calculations
-
 ```bash
 $ npm install twitter-search
 ```
@@ -23,14 +16,15 @@ $ npm install twitter-search
  var config = {
   query : "from:kisshotch",
   regex : /node|mongo/gi,
-  filter : ["cancer", "is"]
+  filter : ["was", "is"]
 };
 
 search(config, function(error, tweets, tweetCount) {
   if (error) {
     console.error(error);
   } else {
-    console.log("tweets:",tweetCount);
+    console.log("tweets:", tweetCount);
+    console.log(tweets);
   };
 });
 
