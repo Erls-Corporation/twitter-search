@@ -1,4 +1,3 @@
-
 twitter-search
 ==============
 
@@ -13,6 +12,8 @@ $ npm install twitter-search
 ***Basic Twitter Search***
 
 ```javascript
+var search = require("twitter-search");
+
  var config = {
   query : "from:kisshotch",
   regex : /node|mongo/gi,
