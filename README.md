@@ -1,7 +1,7 @@
 
-# node-twitter
+# twitter-search
 
-## Node.js Twitter API Search w/ search result pagination, returning up to 1500 queried tweets**
+## NodeJS Twitter Search API Wrapper
 
 ### Installation
 
