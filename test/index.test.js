@@ -5,7 +5,7 @@ var assert = require("assert");
 var should = require("should");
 
 // twitter-search core
-var search = require("../");
+var search = require("../lib/node-twitter").search;
 
 vows.describe("General Module Tests").addBatch({
   "when instantiating twitter-search" : {

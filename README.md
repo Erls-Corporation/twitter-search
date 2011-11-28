@@ -1,15 +1,15 @@
-twitter-search
-==============
 
-**Node.js Twitter API Search w/ search result pagination, returning up to 1500 queried tweets**
+# node-twitter
+
+## Node.js Twitter API Search w/ search result pagination, returning up to 1500 queried tweets**
+
+### Installation
 
 ```bash
 $ npm install twitter-search
 ```
 
-## Example ##
-
-***Basic Twitter Search***
+### Twitter Search Example
 
 ```javascript
 var search = require("twitter-search");

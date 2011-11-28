@@ -1,17 +1,17 @@
 {
   "author":"Edward Hotchkiss <e@ingk.com>",
-  "name":"twitter-search",
-  "description":"NodeJS Twitter API Search Wrapper with RegExp/Advanced Sorting/Filtering",
-  "version":"0.0.7",
+  "name":"node-twitter",
+  "description":"NodeJS Twitter API Wrapper with Advanced Search",
+  "version":"0.0.8",
   "repository":{
     "type":"git",
-    "url":"https://github.com/edwardhotchkiss/twitter-search"
+    "url":"https://github.com/edwardhotchkiss/node-twitter"
   },
   "keywords":["twitter", "twitter-search", "search", "API", "wrapper"],
   "engines":{
     "node":">= 0.4.12 < 0.7.0"
   },
-  "main":"./lib/twitter-search",
+  "main":"./lib/node-twitter",
   "dependencies":{
     "request":"2.2.0"
   },
