@@ -1,11 +1,11 @@
 {
   "author":"Edward Hotchkiss <e@ingk.com>",
-  "name":"node-twitter",
+  "name":"twitter-search",
   "description":"NodeJS Twitter Search API Wrapper",
   "version":"0.0.9",
   "repository":{
     "type":"git",
-    "url":"https://github.com/edwardhotchkiss/node-twitter"
+    "url":"https://github.com/edwardhotchkiss/twitter-search"
   },
   "keywords":["twitter", "twitter-search", "search", "API", "wrapper"],
   "engines":{
