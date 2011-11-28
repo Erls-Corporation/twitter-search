@@ -11,7 +11,7 @@ vows.describe("Noise Filter").addBatch({
   "When performing a search with a noise filter that is an 'Array' of length of 1 only" : {
     topic : function() {
       var config = {
-        query : "from:kisshotch",
+        query : "from:nodejs",
         regex : /node|mongo/gi,
         filter : ["cancer"]
       };

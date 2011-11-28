@@ -11,7 +11,7 @@ vows.describe("Twitter Search [Basic]").addBatch({
   "when performing a search" : {
     topic : function() {
       var config = {
-        query : "from:kisshotch"
+        query : "from:nodejs"
       };
       search(config, this.callback);
     },
