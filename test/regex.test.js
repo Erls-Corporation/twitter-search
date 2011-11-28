@@ -5,7 +5,7 @@ var assert = require("assert");
 var should = require("should");
 
 // twitter-search core
-var search = require("../");
+var search = require("../lib/node-twitter").search;
 
 vows.describe("RegEx Tests").addBatch({
   "When performing a search with a regex looking for node or mongo which I'm always talking about" : {
