@@ -11,7 +11,7 @@ vows.describe("RegEx Tests").addBatch({
   "When performing a search with a regex looking for node or mongo which I'm always talking about" : {
     topic : function() {
       var config = {
-        query : "from:kisshotch",
+        query : "from:nodejs",
         regex : /node|mongo/gi
       };
       search(config, this.callback);
