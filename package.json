@@ -1,8 +1,8 @@
 {
   "author":"Edward Hotchkiss <e@ingk.com>",
   "name":"node-twitter",
-  "description":"NodeJS Twitter API Wrapper with Advanced Search",
-  "version":"0.0.8",
+  "description":"NodeJS Twitter Search API Wrapper",
+  "version":"0.0.9",
   "repository":{
     "type":"git",
     "url":"https://github.com/edwardhotchkiss/node-twitter"
@@ -11,9 +11,10 @@
   "engines":{
     "node":">= 0.4.12 < 0.7.0"
   },
-  "main":"./lib/node-twitter",
+  "main":"./lib/twitter-search",
   "dependencies":{
-    "request":"2.2.0"
+    "request":"2.2.0",
+    "oauth":"0.9.5"
   },
   "devDependencies":{
     "vows":"0.5.11",
