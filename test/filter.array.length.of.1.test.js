@@ -5,7 +5,7 @@ var assert = require("assert");
 var should = require("should");
 
 // twitter-search core
-var search = require("../");
+var search = require("../lib/node-twitter").search;
 
 vows.describe("Noise Filter").addBatch({
   "When performing a search with a noise filter that is an 'Array' of length of 1 only" : {
