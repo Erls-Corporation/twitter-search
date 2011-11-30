@@ -2,7 +2,7 @@
   "author":"Edward Hotchkiss <e@ingk.com>",
   "name":"twitter-search",
   "description":"NodeJS Twitter Search API Wrapper",
-  "version":"0.0.9",
+  "version":"0.1.0",
   "repository":{
     "type":"git",
     "url":"https://github.com/edwardhotchkiss/twitter-search"
@@ -13,8 +13,7 @@
   },
   "main":"./lib/twitter-search",
   "dependencies":{
-    "request":"2.2.0",
-    "oauth":"0.9.5"
+    "request":"2.2.5"
   },
   "devDependencies":{
     "vows":"0.5.11",
