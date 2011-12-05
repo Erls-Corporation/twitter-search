@@ -1,7 +1,5 @@
 
-# twitter-search
-
-## NodeJS Twitter Search API Wrapper
+# Twitter-Search (NodeJS Twitter Search API Wrapper)
 
 ### Installation
 
@@ -12,19 +10,19 @@ $ npm install twitter-search
 ### Twitter Search Example
 
 ```javascript
-var search = require("twitter-search");
+var search = require('twitter-search');
 
  var config = {
-  query : "from:kisshotch",
+  query : 'from:kisshotch',
   regex : /node|mongo/gi,
-  filter : ["was", "is"]
+  filter : ['was', 'is']
 };
 
 search(config, function(error, tweets, tweetCount) {
   if (error) {
     console.error(error);
   } else {
-    console.log("tweets:", tweetCount);
+    console.log('tweets:', tweetCount);
     console.log(tweets);
   };
 });

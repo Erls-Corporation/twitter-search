@@ -13,12 +13,12 @@
   },
   "main":"./lib/twitter-search",
   "dependencies":{
-    "request":"2.2.5",
+    "request":"2.2.9",
     "belt":"0.0.3"
   },
   "devDependencies":{
-    "vows":"0.5.11",
-    "should":"0.3.1"
+    "vows":"0.6.0",
+    "should":"0.3.2"
   },
   "scripts": {
     "test": "vows test/*.test.js --spec"
