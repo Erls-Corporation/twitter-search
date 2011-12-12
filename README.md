@@ -1,5 +1,7 @@
 
-# Twitter-Search (NodeJS Twitter Search API Wrapper)
+# Twitter-Search
+
+> NodeJS Twitter Search API Wrapper
 
 ### Installation
 
@@ -15,7 +17,7 @@ var search = require('twitter-search');
  var config = {
   query : 'from:kisshotch',
   regex : /node|mongo/gi,
-  filter : ['was', 'is']
+  filter : ['noise', 'words']
 };
 
 search(config, function(error, tweets, tweetCount) {
