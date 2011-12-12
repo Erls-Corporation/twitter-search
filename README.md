@@ -17,7 +17,7 @@ var search = require('twitter-search');
  var config = {
   query : 'from:kisshotch',
   regex : /node|mongo/gi,
-  filter : ['noise', 'words']
+  filter : ['noise', 'words'] // alternatively, filter : /noise|words/gi
 };
 
 search(config, function(error, tweets, tweetCount) {
