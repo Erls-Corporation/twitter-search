@@ -1,7 +1,7 @@
 
 # Twitter-Search [![Build Status](https://secure.travis-ci.org/edwardhotchkiss/twitter-search.png)](http://travis-ci.org/edwardhotchkiss/twitter-search)
 
-> NodeJS Twitter Search API Wrapper
+> NodeJS Twitter API Search Wrapper with RegExp Filtering
 
 ### Installation
 
