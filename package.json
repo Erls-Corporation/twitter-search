@@ -7,7 +7,7 @@
     "type":"git",
     "url":"https://github.com/edwardhotchkiss/twitter-search"
   },
-  "keywords":["twitter", "twitter-search", "search", "API", "wrapper"],
+  "keywords":["twitter","twitter-search","search","API","wrapper"],
   "engines":{
     "node":">= 0.6.0 < 0.8.0"
   },
@@ -24,7 +24,7 @@
     "type":"MIT",
     "url":"http://github.com/edwardhotchkiss/twitter-search/LICENSE"
   }],
-  "scripts": {
-    "test": "vows test/*.test.js"
+  "scripts":{
+    "test":"vows test/*.test.js"
   }
 }
