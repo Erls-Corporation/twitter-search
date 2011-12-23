@@ -1,4 +1,16 @@
 
+0.1.7 / 2011-12-23 
+==================
+
+  * bump `belt` version to 0.0.5 to fix 0.4 and 0.8 build tests
+  * travis w/ 0.4, 0.6, 0.8
+  * `belt` was outdated, bump to 0.0.4 to have travis pass all tests
+  * use all lower case identifiers within /test(s)
+  * only include the license top and holder within the readme file
+  * update package.json node engine range to align with travis config
+  * package should work 0.4.x - 0.8.0, travis also only checks master now
+  * changelog added, started at 0.1.6. use --spec with npm test via vows
+
 0.1.6 / 2011-12-23 
 ==================
 
