@@ -14,7 +14,7 @@
   "main":"./lib/twitter-search",
   "dependencies":{
     "request":"2.2.9",
-    "belt":"0.0.3"
+    "belt":"0.0.4"
   },
   "devDependencies":{
     "vows":"0.6.0",
