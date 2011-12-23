@@ -7,7 +7,7 @@ var should = require('should');
 // twitter-search core
 var search = require('../lib/twitter-search');
 
-vows.describe('General Module Tests').addBatch({
+vows.describe('general module tests').addBatch({
   'when instantiating twitter-search' : {
     topic : function() { 
       return search;

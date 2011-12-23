@@ -7,8 +7,8 @@ var should = require('should');
 // twitter-search core
 var search = require('../lib/twitter-search');
 
-vows.describe('Noise Filter').addBatch({
-  'When performing a search with a noise filter that is a "RegEx"' : {
+vows.describe('noise filter').addBatch({
+  'when performing a search with a noise filter that is a "RegEx"' : {
     topic : function() {
       var config = {
         query : 'from:nodejs',
