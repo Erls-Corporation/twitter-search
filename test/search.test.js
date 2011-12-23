@@ -7,7 +7,7 @@ var should = require('should');
 // twitter-search core
 var search = require('../lib/twitter-search');
 
-vows.describe('Twitter Search [Basic]').addBatch({
+vows.describe('twitter search [basic]').addBatch({
   'when performing a search' : {
     topic : function() {
       var config = {

@@ -7,7 +7,7 @@ var should = require('should');
 // twitter-search core
 var search = require('../lib/twitter-search');
 
-vows.describe('RegEx Tests').addBatch({
+vows.describe('regexp tests').addBatch({
   'When performing a search with a regex looking for node or mongo which I\'m always talking about' : {
     topic : function() {
       var config = {
