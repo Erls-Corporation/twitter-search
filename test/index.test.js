@@ -1,13 +1,18 @@
 
-// testing
-var vows = require('vows');
-var assert = require('assert');
-var should = require('should');
+/*
+  Core Modules
+ */
 
-// twitter-search core
-var search = require('../lib/twitter-search');
+var vows = require('vows'),
+    assert = require('assert'),
+    should = require('should'),
+    search = require('../lib/twitter-search');
 
-vows.describe('general module tests').addBatch({
+/*
+  Test Suite
+*/
+
+vows.describe('`twitter-search` module tests').addBatch({
   'when instantiating twitter-search' : {
     topic:function() { 
       return search;
@@ -32,9 +37,8 @@ vows.describe('general module tests').addBatch({
     'count should be null' : function(error, tweets, count) {
       assert.isNull(count);
     }
-  }
-}).describe('twitter search [basic]').addBatch({
-  'when performing a search':{
+  },
+  'when performing a search of the twitter api':{
     topic:function(){
       var config = {
         query : 'from:nodejs',
@@ -52,9 +56,8 @@ vows.describe('general module tests').addBatch({
     'count should be a number':function(error, tweets, count){
       count.should.be.a('number');
     }
-  }
-}).describe('noise filter').addBatch({
-  'When performing a search with a noise filter that is an \'Array\' of length of more than one' : {
+  },
+  'when performing a search with a noise filter that is an \'Array\' of length of more than one' : {
     topic : function() {
       var config = {
         query : 'from:nodejs',
