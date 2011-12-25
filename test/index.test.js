@@ -37,7 +37,9 @@ vows.describe('general module tests').addBatch({
   'when performing a search':{
     topic:function(){
       var config = {
-        query:'from:nodejs'
+        query : 'from:nodejs',
+        regex : /node|mongo/gi,
+        filter : /cancer/gi
       };
       search(config, this.callback);
     },
