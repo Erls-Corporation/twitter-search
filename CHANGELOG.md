@@ -2,6 +2,7 @@
 0.2.0 / 2011-12-25 
 ==================
 
+  * should was still require()d, removed
   * version bump, removed `should` from package
   * removed `should` from tests
   * removed debug logging from /lib
