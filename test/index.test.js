@@ -5,7 +5,6 @@
 
 var vows = require('vows'),
     assert = require('assert'),
-    should = require('should'),
     search = require('../lib/twitter-search');
 
 /*
