@@ -13,28 +13,28 @@ var vows = require('vows'),
 */
 
 vows.describe('`twitter-search` module tests').addBatch({
-  'when instantiating twitter-search' : {
+  'when instantiating twitter-search':{
     topic:function() { 
       return search;
     },
-    'search should be a function' : function (topic) {
+    'search should be a function':function(topic){
       topic.should.be.a('function');
     },
   },
-  'when performing a search without a config set' : {
+  'when performing a search without a config set':{
     topic:function() {
       search(null, this.callback);
     },
-    'should have error errors' : function(error, tweets, count) {
+    'should have error errors':function(error, tweets, count){
       assert.isNotNull(error);
     },
     'should receive error message \'config needs to be defined!\'': function(error, tweets, count) {
       assert.equal(error.message, 'config needs to be defined!');
     },
-    'tweets should be null' : function(error, tweets, count) {
+    'tweets should be null':function(error, tweets, count) {
       assert.isNull(tweets);
     },
-    'count should be null' : function(error, tweets, count) {
+    'count should be null':function(error, tweets, count) {
       assert.isNull(count);
     }
   },
@@ -48,35 +48,35 @@ vows.describe('`twitter-search` module tests').addBatch({
       search(config, this.callback);
     },
     'we should get back no errors':function(error, tweets, count){
-      assert.isNull(error);
+      assert.equal(error);
     },
     'tweets should be an object':function(error, tweets, count){
-      tweets.should.be.a('object');
+      assert.equal('object', typeof(tweets));
     },
     'count should be a number':function(error, tweets, count){
-      count.should.be.a('number');
+      assert.isNumber(count);
     }
   },
   'when performing a search with a noise filter that is an \'Array\' of length of more than one' : {
-    topic : function() {
+    topic:function() {
       var config = {
-        query : 'from:nodejs',
-        regex : /node|mongo/gi,
+        query  : 'from:nodejs',
+        regex  : /node|mongo/gi,
         filter : ['cancer', 'ingk']
       };
       search(config, this.callback);
     },
-    'we should get back no errors' : function(error, tweets, count) {
+    'we should get back no errors':function(error, tweets, count) {
       assert.isNull(error);
     },
-    'tweets should be an object' : function(error, tweets, count) {
-      tweets.should.be.a('object');
+    'tweets should be an object':function(error, tweets, count) {
+      assert.equal('object', typeof(tweets));
     },
-    'count should be a number' : function(error, tweets, count) {
-      count.should.be.a('number');
+    'count should be a number':function(error, tweets, count) {
+      assert.isNumber(count);
     },
-    'result set should not be empty' : function(error, tweets, count) {
-      tweets.should.not.be.empty;
+    'result set should not be empty':function(error, tweets, count) {
+      assert.isNotNull(tweets.length);
     }
   }
 }).export(module);
