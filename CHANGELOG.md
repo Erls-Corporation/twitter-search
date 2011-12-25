@@ -1,4 +1,21 @@
 
+0.2.0 / 2011-12-25 
+==================
+
+  * should was still require()d, removed
+  * version bump, removed `should` from package
+  * removed `should` from tests
+  * removed debug logging from /lib
+  * tests passing with refactor
+  * merge all tests, 3 suites now
+  * merge more tests for faster testing
+  * remove duplicate testing
+  * remove search.test.js, merge tests to increase test speeds
+  * format license
+  * version bump to 0.1.7
+  * updated changelog for 0.1.7
+  * bump `belt` version to 0.0.5 to fix 0.4 and 0.8 build tests
+
 0.1.7 / 2011-12-23 
 ==================
 

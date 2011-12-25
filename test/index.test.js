@@ -5,7 +5,6 @@
 
 var vows = require('vows'),
     assert = require('assert'),
-    should = require('should'),
     search = require('../lib/twitter-search');
 
 /*
@@ -18,7 +17,7 @@ vows.describe('`twitter-search` module tests').addBatch({
       return search;
     },
     'search should be a function':function(topic){
-      topic.should.be.a('function');
+      assert.isFunction(topic);
     },
   },
   'when performing a search without a config set':{
