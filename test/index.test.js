@@ -53,6 +53,29 @@ vows.describe('general module tests').addBatch({
       count.should.be.a('number');
     }
   }
+}).describe('noise filter').addBatch({
+  'When performing a search with a noise filter that is an \'Array\' of length of more than one' : {
+    topic : function() {
+      var config = {
+        query : 'from:nodejs',
+        regex : /node|mongo/gi,
+        filter : ['cancer', 'ingk']
+      };
+      search(config, this.callback);
+    },
+    'we should get back no errors' : function(error, tweets, count) {
+      assert.isNull(error);
+    },
+    'tweets should be an object' : function(error, tweets, count) {
+      tweets.should.be.a('object');
+    },
+    'count should be a number' : function(error, tweets, count) {
+      count.should.be.a('number');
+    },
+    'result set should not be empty' : function(error, tweets, count) {
+      tweets.should.not.be.empty;
+    }
+  }
 }).export(module);
 
 /* EOF */
