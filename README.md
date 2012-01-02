@@ -12,6 +12,7 @@ $ npm install twitter-search
 ### Twitter Search Example
 
 ```javascript
+
 var search = require('twitter-search');
 
  var config = {
@@ -29,7 +30,6 @@ search(config, function(error, tweets, tweetCount) {
   };
 });
 
-/* EOF */
 ```
 
 ## Run Tests
@@ -44,4 +44,4 @@ Copyright (c) 2011, Edward Hotchkiss.
 
 ## Author: [Edward Hotchkiss][0]
 
-[0]: http://ingklabs.com/
+[0]: http://edwardhotchkiss.com/

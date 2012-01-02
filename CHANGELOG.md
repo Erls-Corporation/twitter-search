@@ -5,7 +5,6 @@
   * changed travis to only test 0.4 and 0.6
   * tests fix
   * updated changelog
-  * should was still require()d, removed
 
 0.2.1 / 2011-12-25 
 ==================
