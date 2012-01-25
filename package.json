@@ -14,18 +14,14 @@
   "main":"./lib/twitter-search",
   "dependencies":{
     "request":"2.2.9",
-    "belt":"0.0.5",
-    "eventemitter2":"0.4.3",
-    "async":"0.1.15"
+    "belt":"0.0.5"
   },
-  "devDependencies":{
-    "vows":"0.6.0"
-  },
+  "devDependencies":{},
   "licenses":[{
     "type":"MIT",
     "url":"http://github.com/edwardhotchkiss/twitter-search/LICENSE"
   }],
   "scripts":{
-    "test":"vows test/*.test.js --spec"
+    "test":"node test/index.test.js"
   }
 }
